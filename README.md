@@ -1,8 +1,6 @@
 Darwin and Network Rail Open Data .NET Examples
 ===============================================
 
-**IMPORTANT NOTE** - this client has recently been updated in error to use OpenWire, not Stomp.  This message will be removed once the examples are converted back to using Stomp.
-
 Version History
 ---------------
 
@@ -13,15 +11,18 @@ Version History
 | 1.02    | 2019-04-18 | CBailiss   | Added two Darwin Push Port v16 examples:  (1) MinimalDarwinPushPortClientV16 and (2) ExampleDarwinPushPortClientV16 | 
 | 1.03    | 2020-02-05 | PeterHicks | Minor code and README cleanup | 
 | 1.04    | 2023-01-20 | Legolash2o | Updated Apached Libraries to ActiveMQ and v1.8.0. Updated default connection to new publicfeeds. Updated .NET version to 4.8
+| 1.05    | 2023-01-20 | Legolash2o | Updated to .NET 7 LTS (for compatibility with Linux)
 
 Overview
 --------
 
-This solution contains four Visual Studio 2017 Projects
+This solution contains three Visual Studio 2022 Projects
 
  * `ExampleDarwinPushPortClientV16` demonstrates how to receive information from the RDG Darwin System (V16).
  * `MinimalDarwinPushPortClientV16` demonstrates the bare bones of receiving messages from the RDG Darwin System (V16).
  * `ExampleNetworkRailOpenDataClient` demonstrates how to receive information from the Network Rail Open Data Platform.
+ 
+The projects have been converted to .NET 7 LTS for added compatibility on Linux machines. 
 
 The `MinimalDarwinPushPortClientV16` example was added because the other example clients are more involved.  They have more features (described below) but are not so easy to understand.
 
@@ -95,7 +96,7 @@ The oMessageQueue object is thread-safe.  This means the "while" loop above can 
 
 Note that because oMessageQueue is a ConcurrentQueue, occasionally (if another thread is accessing the queue at that very specific moment) TryDequeue() will return false, which means it wasn't able at that specific moment to retrieve a message.  This is normal - simply try again as shown in the code above.
 
-This code was build against v1.7.0 of the Apache NMS Messaging API (http://activemq.apache.org/nms/).  The Apache.NMS and Apache.NMS.ActiveMQ assemblies can be downloaded from http://activemq.apache.org/nms/download.html.  The example uses OpenWire to connect to the service.
+This code was build against v1.8.0 of the Apache NMS Messaging API (http://activemq.apache.org/nms/).  The Apache.NMS and Apache.NMS.ActiveMQ assemblies can be downloaded from http://activemq.apache.org/nms/download.html.  The example uses OpenWire to connect to the service.
 
 ExampleNetworkRailOpenDataClient
 --------------------------------
@@ -154,4 +155,4 @@ After these lines have been executed, the oMessageQueue object will start to be 
 
 Note that because oMessageQueue is a ConcurrentQueue, occasionally (if another thread is accessing the queue at that very specific moment) TryDequeue() will return false, which means it wasn't able at that specific moment to retrieve a message.  This is normal - simply try again as shown in the code above.
 
-This code was build against v1.5.1 of the Apache NMS Messaging API (http://activemq.apache.org/nms/).  The Apache.NMS and Apache.NMS.ActiveMQ assemblies can be downloaded from http://activemq.apache.org/nms/download.html.  The example uses Stomp to connect to the service.
+This code was build against v1.8.0 of the Apache NMS Messaging API (http://activemq.apache.org/nms/).  The Apache.NMS and Apache.NMS.ActiveMQ assemblies can be downloaded from http://activemq.apache.org/nms/download.html.  The example uses Stomp to connect to the service.
