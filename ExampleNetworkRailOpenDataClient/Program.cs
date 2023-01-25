@@ -12,8 +12,8 @@ namespace ExampleNetworkRailOpenDataClient
      * This sample illustrates how to use .Net generally and C# specifically to 
      * receive and process messages from the Network Rail Open Data Platform.  Originally written by Chris Bailiss.
      * This sample makes use of the Apache NMS Messaging API - http://activemq.apache.org/nms/
-     * This sample was built against v1.5.1 of the API.  
-     * The Apache.NMS and Apache.NMS.Stomp assemblies can be downloaded from http://activemq.apache.org/nms/download.html
+     * This sample was built against v1.8.0 of the API.  
+     * The Apache.NMS and Apache.NMS.ActiveMQ assemblies can be downloaded from http://activemq.apache.org/nms/download.html
      */
 
     class Program

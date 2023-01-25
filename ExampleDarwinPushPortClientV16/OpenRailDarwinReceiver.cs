@@ -14,7 +14,7 @@ namespace OpenRailMessaging
      * This sample illustrates how to use .Net generally and C# specifically to 
      * receive and process messages from the Darwin Push Port.  Originally written by Chris Bailiss.
      * This sample makes use of the Apache NMS Messaging API - http://activemq.apache.org/nms/
-     * This sample was built against v1.7.0 of the API.  
+     * This sample was built against v1.8.0 of the API.  
      * The Apache.NMS and Apache.NMS.ActiveMQ assemblies can be downloaded from http://activemq.apache.org/nms/download.html
      */
 

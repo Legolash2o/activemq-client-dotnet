@@ -5,11 +5,13 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<AssemblyVersion>1.0.5</AssemblyVersion>
+		<FileVersion>1.0.5</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Apache.NMS" Version="1.8.0" allowedVersions="[1.8.0]"/>
-		<PackageReference Include="Apache.NMS.ActiveMQ" Version="1.8.0"  allowedVersions="[1.8.0]"/>
+		<PackageReference Include="Apache.NMS" Version="1.8.0" allowedVersions="[1.8.0]" />
+		<PackageReference Include="Apache.NMS.ActiveMQ" Version="1.8.0" allowedVersions="[1.8.0]" />
 	</ItemGroup>
 
 </Project>
